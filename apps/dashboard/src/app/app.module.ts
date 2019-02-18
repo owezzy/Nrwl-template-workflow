@@ -9,6 +9,9 @@ import { MaterialModule } from '@workshop/material';
 import { HomeModule } from './home/home.module';
 import { ProjectsModule } from './projects/projects.module';
 import { CustomersModule } from './customers/customers.module';
+import { AppRoutingModule } from './app-routing.module';
+import { UiLoginModule } from "@workshop/ui-login";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,8 +20,17 @@ import { CustomersModule } from './customers/customers.module';
     NxModule.forRoot(),
     BrowserAnimationsModule,
     MaterialModule,
+    UiLoginModule,
+    HttpClientModule,
+    HomeModule,
+    ProjectsModule,
+    CustomersModule,
+    AppRoutingModule,
+    RouterModule
+
+
+
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
