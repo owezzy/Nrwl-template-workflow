@@ -11,6 +11,8 @@ import { ProjectsModule } from './projects/projects.module';
 import { CustomersModule } from './customers/customers.module';
 import { AppRoutingModule } from './app-routing.module';
 import { UiLoginModule } from "@workshop/ui-login";
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -19,10 +21,16 @@ import { UiLoginModule } from "@workshop/ui-login";
     BrowserAnimationsModule,
     MaterialModule,
     UiLoginModule,
-    AppRoutingModule
+    HttpClientModule,
+    HomeModule,
+    ProjectsModule,
+    CustomersModule,
+    AppRoutingModule,
+    RouterModule
+
+
 
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
