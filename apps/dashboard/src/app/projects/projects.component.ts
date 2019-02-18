@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Project, ProjectsService } from '@workshop/core-data';
 
-
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -24,6 +23,10 @@ export class ProjectsComponent implements OnInit {
 
   getProjects(){
    this.projects$ = this.projectService.all()
+  }
+
+  saveProject(project) {
+    console.log('SAVING_PROJECT', project)
   }
 
   deleteProject(project){

@@ -9,5 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
   ],
   providers: [ProjectsService]
+
 })
 export class CoreDataModule {}

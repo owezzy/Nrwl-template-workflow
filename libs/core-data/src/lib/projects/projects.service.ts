@@ -1,37 +1,39 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const BASE_URL= 'http://localhost:3000/';
+const BASE_URL = 'http://localhost:3000/';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectsService {
+
   model = 'projects';
 
   constructor(private httpClient: HttpClient) {
   }
-  getUrl(){
-    return `${BASE_URL}${this.model}`
+
+  getUrl() {
+    return `${BASE_URL}${this.model}`;
   }
 
-  getUrlForId(id){
-    return `${this.getUrl()}/${id}`
+  getUrlForId(id) {
+    return `${this.getUrl()}/${id}`;
   }
 
   all() {
     return this.httpClient.get(this.getUrl());
   }
 
-  create(project){
+  create(project) {
     return this.httpClient.post(this.getUrl(), project);
   }
 
-  update(project){
+  update(project) {
     return this.httpClient.patch(this.getUrlForId(project.id), project);
   }
 
-  delete(projectId){
+  delete(projectId) {
     return this.httpClient.delete(this.getUrlForId(projectId));
   }
 
