@@ -9,7 +9,8 @@ import { MaterialModule } from '@workshop/material';
 import { HomeModule } from './home/home.module';
 import { ProjectsModule } from './projects/projects.module';
 import { CustomersModule } from './customers/customers.module';
-
+import { AppRoutingModule } from './app-routing.module';
+import { UiLoginModule } from "@workshop/ui-login";
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -17,6 +18,9 @@ import { CustomersModule } from './customers/customers.module';
     NxModule.forRoot(),
     BrowserAnimationsModule,
     MaterialModule,
+    UiLoginModule,
+    AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
