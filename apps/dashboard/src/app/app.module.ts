@@ -25,8 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
     HomeModule,
     ProjectsModule,
     CustomersModule,
+    RouterModule,
     AppRoutingModule,
-    RouterModule
+
 
 
 
