@@ -26,6 +26,10 @@ export class ProjectsComponent implements OnInit {
    this.projects$ = this.projectService.all()
   }
 
+  saveProject(project) {
+    console.log('SAVING_PROJECT', project)
+  }
+
   deleteProject(project){
     this.projectService.delete(project.id)
       .subscribe(result => this.getProjects())
