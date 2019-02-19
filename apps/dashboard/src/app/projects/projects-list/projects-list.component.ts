@@ -6,15 +6,11 @@ import { Project } from '@workshop/core-data';
   templateUrl: './projects-list.component.html',
   styleUrls: ['./projects-list.component.css']
 })
-export class ProjectsListComponent implements OnInit {
+export class ProjectsListComponent {
   @Input() projects: Project[];
   @Input() readonly = false;
+  @Output() selected = new EventEmitter();
+  @Output() deleted = new EventEmitter();
 
-
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }
