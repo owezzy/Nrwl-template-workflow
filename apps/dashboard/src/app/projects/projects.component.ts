@@ -21,8 +21,8 @@ export class ProjectsComponent implements OnInit {
   }
 
   selectProject(project) {
-    this.selectedProject = project;
-    console.log('SELECTED PROJECT', project);
+    // this.selectedProject = project;
+    console.log('SELECT PROJECT', project);
   }
 
   getProjects() {
@@ -54,8 +54,9 @@ export class ProjectsComponent implements OnInit {
   }
 
   deleteProject(project) {
-    this.projectService.delete(project.id)
-      .subscribe(result => this.getProjects());
+    console.log('DELETE PROJECT', project)
+    // this.projectService.delete(project.id)
+    //   .subscribe(result => this.getProjects());
   }
 
   resetProject() {
