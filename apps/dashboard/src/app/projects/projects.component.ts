@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Project, ProjectsService } from '@workshop/core-data';
-import { el } from '@angular/platform-browser/testing/src/browser_util';
 
 @Component({
   selector: 'app-projects',
@@ -22,7 +21,6 @@ export class ProjectsComponent implements OnInit {
 
   selectProject(project) {
     this.selectedProject = project;
-    console.log('SELECTED PROJECT', project);
   }
 
   getProjects() {

@@ -94,9 +94,9 @@
   "projects": [
     {
       "id": "1",
-      "title": "Project One",
+      "title": "Project Uno",
       "details": "This is a sample project",
-      "percentComplete": 20,
+      "percentComplete": 38,
       "approved": false,
       "startDate": null,
       "targetDate": null,
@@ -127,7 +127,7 @@
     },
     {
       "id": "wexQla-",
-      "title": "Software Developer 12",
+      "title": "Software Developer",
       "details": "sokoborarr",
       "percentComplete": 41,
       "approved": true
