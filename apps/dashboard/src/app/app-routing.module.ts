@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from '@workshop/ui-login';
+import { LoginComponent } from '../../../../libs/ui-login/src/lib/login/login.component';
 
 const routes: Routes = [
   { path: '', loadChildren: './home/home.module#HomeModule' },
