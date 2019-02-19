@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Project } from '@workshop/core-data';
 
 @Component({
   selector: 'app-projects-details',
@@ -6,10 +7,15 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./projects-details.component.css']
 })
 export class ProjectsDetailsComponent {
-  @Input() project;
+  currentProject: Project;
+  originalTitle;
   @Output() saved = new EventEmitter();
   @Output() cancelled = new EventEmitter();
 
+  @Input() set project(value) {
+    if(value) this.originalTitle = value.title;
+    this.currentProject = Object.assign({}, value);
+  }
 
 
 }
