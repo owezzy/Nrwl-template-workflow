@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from '@workshop/ui-login';
+import { LoginComponent } from '../lib/login/login.component';
 
 
 @NgModule({

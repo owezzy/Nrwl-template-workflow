@@ -22,7 +22,6 @@ import {UiLoginModule} from '@workshop/ui-login';
     MaterialModule,
     UiLoginModule,
     HttpClientModule,
-    HomeModule,
     AppRoutingModule,
 
 
