@@ -7,11 +7,10 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '@workshop/material';
 import { HomeModule } from './home/home.module';
-import { ProjectsModule } from './projects/projects.module';
-import { CustomersModule } from './customers/customers.module';
 import { AppRoutingModule } from './app-routing.module';
-import { UiLoginModule } from "@workshop/ui-login";
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import {UiLoginModule} from '@workshop/ui-login';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,13 +18,10 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     NxModule.forRoot(),
     BrowserAnimationsModule,
+    FormsModule,
     MaterialModule,
     UiLoginModule,
     HttpClientModule,
-    HomeModule,
-    ProjectsModule,
-    CustomersModule,
-    RouterModule,
     AppRoutingModule,
 
 
