@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Project, ProjectsService } from '@workshop/core-data';
-import { el } from '@angular/platform-browser/testing/src/browser_util';
 
 @Component({
   selector: 'app-projects',
@@ -21,8 +20,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   selectProject(project) {
-    // this.selectedProject = project;
-    console.log('SELECT PROJECT', project);
+    this.selectedProject = project;
   }
 
   getProjects() {
@@ -54,9 +52,8 @@ export class ProjectsComponent implements OnInit {
   }
 
   deleteProject(project) {
-    console.log('DELETE PROJECT', project)
-    // this.projectService.delete(project.id)
-    //   .subscribe(result => this.getProjects());
+    this.projectService.delete(project.id)
+      .subscribe(result => this.getProjects());
   }
 
   resetProject() {

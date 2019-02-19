@@ -11,6 +11,9 @@
   </div>
   <!-- PROJECT DETAILS -->
   <div class="col-50">
-    <app-projects-details></app-projects-details>
+    <app-projects-details
+    [project]="selectedProject"
+    (saved)="saveProject($event)"
+    (cancelled)="cancel($event)"></app-projects-details>
   </div>
 </div>
